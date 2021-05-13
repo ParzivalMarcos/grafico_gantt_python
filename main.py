@@ -12,7 +12,7 @@ def grafico_gantt():
                       y=tarefas,
                       color=perc_completado,
                       title='Grafico de Gantt com Python',
-                      color_continuous_scale = px.colors.sequential.Magenta)
+                      color_continuous_scale=px.colors.sequential.Magenta)
 
     # -- Ajustando Layout
     grafico.update_layout(
@@ -21,7 +21,7 @@ def grafico_gantt():
         title_font_family='Arial'
     )
 
-    # -- Grafico Interativo
+    # -- Grafico Interativo com filtro pela data
     # Renomeando colunas do Data Frame
     # df.rename(columns={
     #     "Tarefa": "Task",
@@ -34,7 +34,6 @@ def grafico_gantt():
 
     # Reordenando o gráfico
     grafico.update_yaxes(autorange='reversed')
-
     return grafico
 
 
